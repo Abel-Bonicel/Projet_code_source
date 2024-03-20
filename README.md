@@ -7,6 +7,7 @@
 **Objectif :** Développer le coeur d'un jeu à deux joueurs qui se déplacent sur une grille de 10*10.
 
 **Règle du jeu :**
+
 	-Grille : La grille est un espace de 10 par 10 cases.
 	-Déplacement : A chaque tour, un joueur peut choisir parmi les actions suivantes:
 		-Pivoter à gauche de 90°.
