@@ -35,7 +35,9 @@
 **Remarque :** Le fonctionnalité du jeu est importante, mais la priorité est mise sur la qualité du code, les tests et la documentation.
 
 
-#Méthode utilisé :
+# Méthode utilisé :
+
+## Création machine virtuel et mise en place de git :
 
 Pour mettre en oeuvre ce projet j'ai décidé d'utiliser une Machine Virtuelle Ubuntu. Ci-dessous je vais vous indiquer comment mettre en place le projet de la même façon que moi :
 
@@ -50,7 +52,8 @@ Pour utiliser git nous aurons besoins de générer une clé ssh afin de communiq
 
 Cela vas vous demander plusieurs informations mais cela n'est pas nécessaire et je vous recommande de rien mettre dans les champs : 
 
-	```	
+	```
+	{	
 	Generating public/private rsa key pair.
 	Enter file in which to save the key (/home/user/.ssh/id_rsa): 
 	Enter passphrase (empty for no passphrase): 
@@ -58,6 +61,7 @@ Cela vas vous demander plusieurs informations mais cela n'est pas nécessaire et
 	Your identification has been saved in id_rsa.key
 	Your public key has been saved in id_rsa.key.pub
 	The key fingerprint is:	SHA256:clé user@user-virtual-machine
+	}
 	``` 
 
 Ensuite faite la commande cd pour aller dans le dossier ou la clé a été généré : 
@@ -101,4 +105,9 @@ Commande de base de git :
 `git branch -M <nom de la branche :main ,dev, ...>`
 `git push origin <nom de la branche :main ,dev, ...>`
 
+## Pyhton : 
+
+Pour commencer allez dans l'invite de commande et faites : 
+
+`sudo apt install pyhton`
 
