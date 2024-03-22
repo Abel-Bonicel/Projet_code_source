@@ -15,9 +15,6 @@ class Plateau:
         if self.position_valide(joueur.x, joueur.y):
             self.grille[joueur.y][joueur.x] = 0
 
-    def afficher_plateau(self):
-        for ligne in self.grille:
-            print(' '.join(map(str, ligne)))
 
 
 class TestPlateau(unittest.TestCase):
@@ -131,6 +128,68 @@ class TestJoueur(unittest.TestCase):
         joueur = Joueur(5, 5, 'droite')
         joueur.bouger(3)
         self.assertEqual(joueur.x, 8)
+
+class Visibilite:
+    def __init__(self, plateau):
+        self.plateau = plateau
+
+    def ligne_visible(self, joueur):
+        x, y = joueur.x, joueur.y
+        visible = []
+
+        if joueur.direction == 'haut':
+            for i in range(y - 1, -1, -1):  # Parcours des lignes vers le haut
+                if self.plateau.position_valide(x, i):
+                    visible.append((x, i))
+                else:
+                    break 
+        elif joueur.direction == 'bas':
+            for i in range(y + 1, 10):  # Parcours des lignes vers le bas
+                if self.plateau.position_valide(x, i):
+                    visible.append((x, i))
+                else:
+                    break
+        elif joueur.direction == 'gauche':
+            for i in range(x - 1, -1, -1):  # Parcours des colonnes vers la gauche
+                if self.plateau.position_valide(i, y):
+                    visible.append((i, y))
+                else:
+                    break
+        elif joueur.direction == 'droite':
+            for i in range(x + 1, 10):  # Parcours des colonnes vers la droite
+                if self.plateau.position_valide(i, y):
+                    visible.append((i, y))
+                else:
+                    break
+
+        return visible
+
+class TestVisibilite(unittest.TestCase):
+    def setUp(self):
+        self.plateau = Plateau()
+        self.visibilite = Visibilite(self.plateau)
+
+    def test_ligne_visible_haut(self):
+        joueur = Joueur(5, 5, 'haut')  # Joueur au centre du plateau, face vers le haut
+        visible = self.visibilite.ligne_visible(joueur)
+        self.assertEqual(len(visible), 5)  # Le joueur devrait voir 5 cases vers le haut
+
+    def test_ligne_visible_bas(self):
+        joueur = Joueur(5, 5, 'bas')  # Joueur au centre du plateau, face vers le bas
+        visible = self.visibilite.ligne_visible(joueur)
+        self.assertEqual(len(visible), 4)  # Le joueur devrait voir 4 cases vers le bas
+
+    def test_ligne_visible_gauche(self):
+        joueur = Joueur(5, 5, 'gauche')  # Joueur au centre du plateau, face vers la gauche
+        visible = self.visibilite.ligne_visible(joueur)
+        self.assertEqual(len(visible), 5)  # Le joueur devrait voir 5 cases vers la gauche
+
+    def test_ligne_visible_droite(self):
+        joueur = Joueur(5, 5, 'droite')  # Joueur au centre du plateau, face vers la droite
+        visible = self.visibilite.ligne_visible(joueur)
+        self.assertEqual(len(visible), 4)  # Le joueur devrait voir 4 cases vers la droite
+
+
 
 
 if __name__ == '__main__':
