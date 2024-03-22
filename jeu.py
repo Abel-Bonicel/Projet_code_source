@@ -189,7 +189,19 @@ class TestVisibilite(unittest.TestCase):
         visible = self.visibilite.ligne_visible(joueur)
         self.assertEqual(len(visible), 4)  # Le joueur devrait voir 4 cases vers la droite
 
+def fin_du_jeu(joueur1, joueur2):
+    return joueur1.x == joueur2.x and joueur1.y == joueur2.y
 
+class TestFinDuJeu(unittest.TestCase):
+    def test_fin_du_jeu_false(self):
+        joueur1 = Joueur(3, 4, 'haut')
+        joueur2 = Joueur(7, 7, 'droite')
+        self.assertFalse(fin_du_jeu(joueur1, joueur2))
+
+    def test_fin_du_jeu_true(self):
+        joueur1 = Joueur(3, 4, 'haut')
+        joueur2 = Joueur(3, 4, 'haut')
+        self.assertTrue(fin_du_jeu(joueur1, joueur2))
 
 
 if __name__ == '__main__':
