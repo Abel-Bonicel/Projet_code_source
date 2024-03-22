@@ -111,3 +111,7 @@ Pour commencer allez dans l'invite de commande et faites :
 
 `sudo apt install pyhton`
 
+Puis utilisez un IDE (Environnement de Developpement) et codez ! 
+(Pensez bien à enregistrer vos codes dans le dossier de votre projet)
+
+
