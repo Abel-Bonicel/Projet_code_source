@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="fr" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to Projet_code_source’s documentation! &#8212; Documentation Projet_code_source 24/03/2024</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
+    <script src="_static/documentation_options.js?v=4bac2544"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=d99ca74e"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-projet-code-source-s-documentation">
+<h1>Welcome to Projet_code_source’s documentation!<a class="headerlink" href="#welcome-to-projet-code-source-s-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>Bienvenue dans la documentation de mon Projet !</p>
+<section id="presentation-du-jeu">
+<h2>Présentation du Jeu<a class="headerlink" href="#presentation-du-jeu" title="Link to this heading">¶</a></h2>
+<p>Le jeu est un jeu de plateau stratégique où deux joueurs s’affrontent pour atteindre un objectif commun sur un plateau de jeu de taille 10x10. Chaque joueur contrôle un personnage représenté par une position sur le plateau et une direction dans laquelle il regarde.</p>
+<p>Le but du jeu est de guider votre personnage vers la case où se trouve le personnage adverse. Le premier joueur à atteindre la même case que son adversaire remporte la partie.</p>
+</section>
+<section id="fonctionnalites-principales">
+<h2>Fonctionnalités Principales<a class="headerlink" href="#fonctionnalites-principales" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Placer le joueur sur le plateau :</strong> Permet de positionner un joueur sur une case valide du plateau.</p></li>
+<li><p><strong>Effacer la position du joueur :</strong> Efface la position d’un joueur du plateau.</p></li>
+<li><p><strong>Tourner à gauche ou à droite :</strong> Permet à un joueur de changer sa direction de regard.</p></li>
+<li><p><strong>Déplacer le joueur :</strong> Déplace un joueur d’une ou deux cases dans la direction dans laquelle il regarde.</p></li>
+<li><p><strong>Déterminer la visibilité :</strong> Calcule les cases visibles dans la ligne directe du joueur.</p></li>
+<li><p><strong>Vérifier la fin du jeu :</strong> Verifie si l’un des joueurs a gagné en se retrouvant sur la même case que l’autre joueur.</p></li>
+</ul>
+<p>Cette documentation vise à fournir une référence complète pour comprendre le fonctionnement interne du jeu et à faciliter le développement de fonctionnalités supplémentaires.</p>
+</section>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<p>Pour commencer à travailler sur le code source de ce jeu, suivez les étapes ci-dessous pour configurer votre environnement de développement.</p>
+<ol class="arabic">
+<li><p><strong>Configuration de la Machine Virtuelle :</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Créez une machine virtuelle à l’aide de VMware ou tout autre outils de virtualisation de votre choix.</p></li>
+<li><p>Installez un système d’exploitation compatible, tel que Linux ou Windows, selon vos préférences. J’ai personnellement pris Ubuntu.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Installation de Git :</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Assurez-vous que Git est installé sur votre machine virtuelle en exécutant la commande suivante dans un terminal :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
+</pre></div>
+</div>
+</li>
+<li><p>Configurez Git en associant une clé SSH à votre compte GitLab ou GitHub, selon vos besoins.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Installation de Visual Studio Code :</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Téléchargez et installez Visual Studio Code.</p></li>
+<li><p>Lancez Visual Studio Code et installez les extensions recommandées pour le développement Python.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Clonage du Répertoire Git :</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Ouvrez un terminal dans votre machine virtuelle.</p></li>
+<li><p>Clonez le répertoire Git contenant le code source du jeu en utilisant la commande suivante :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;lien_SSH&gt;<span class="w">   </span><span class="c1"># Remplacez &lt;lien_SSH&gt; par l&#39;e lien SSH du dépôt GitLab ou GitHub</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Allez dans le dossier cloné :</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Accédez au répertoire du projet cloné.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;nom<span class="w"> </span>de<span class="w"> </span>votre<span class="w"> </span>dossier<span class="w"> </span>git&gt;<span class="w">   </span><span class="c1"># Crée un environnement virtuel nommé &#39;venv&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Vous êtes maintenant pret à commencer à développer et à contribuer au jeu !</p>
+</section>
+<section id="utilisation">
+<h1>Utilisation<a class="headerlink" href="#utilisation" title="Link to this heading">¶</a></h1>
+<p>Ce jeu est conçu pour être facilement utilisable et modifiable. Voici les principales fonctionnalités et utilisations du code :</p>
+<ol class="arabic">
+<li><p><strong>Exécution du Jeu :</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Pour exécuter le jeu, allez dans vs code ou en utilisant la commande suivante dans un terminal :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>jeu.py
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Modification du Jeu :</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Vous pouvez facilement modifier le comportement du jeu en modifiant le code source Python. Les fonctionnalités principales du jeu sont mises dans les classes telles que <code class="docutils literal notranslate"><span class="pre">Plateau</span></code>, <code class="docutils literal notranslate"><span class="pre">Joueur</span></code>, et <code class="docutils literal notranslate"><span class="pre">Visibilite</span></code>.</p></li>
+<li><p>Pour ajouter de nouvelles fonctionnalités, modifiez les méthodes existantes ou ajoutez de nouvelles méthodes et classes selon vos besoins.</p></li>
+<li><p>Assurez-vous de respecter les conventions de nommage et de maintenir la cohérence du code avec les commentaires explicatifs pour faciliter la compréhension et la maintenance.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Test du Code :</strong></p>
+<blockquote>
+<div><ul>
+<li><p>Le code est livré avec un ensemble de tests unitaires pour vérifier le bon fonctionnement des différentes fonctionnalités. Vous pouvez exécuter ces tests à l’aide de la commande suivante :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>unittest
+</pre></div>
+</div>
+</li>
+<li><p>Assurez-vous que tous les tests passent avec succès avant de publier ou de déployer des modifications dans le code.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Documentation du Code :</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>La documentation du code est générée à l’aide de Sphinx, un outil de documentation python. Pour générer la documentation, suivez les instructions fournies dans le fichier <code class="docutils literal notranslate"><span class="pre">docs/README.rst</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Contribuer au Projet :</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Si vous souhaitez contribuer au projet en proposant des améliorations ou des correctif, veuillez soumettre une demande d’extraction (pull request) sur le dépôt GitLab ou GitHub du projet.</p></li>
+<li><p>Assurez-vous de suivre les directives de contribution fournies dans le fichier <code class="docutils literal notranslate"><span class="pre">CONTRIBUTING.md</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>En suivant ces instructions, vous pourrez facilement utiliser, modifier et contribuer au développement de ce jeu.</p>
+</section>
+<section id="classes">
+<h1>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h1>
+<p>Le code est structuré autour de plusieurs classes qui représentent les éléments clé du jeu. Chaque classe a un rôle spécifique dans le fonctionnement global du jeu. Voici une description de ces classes :</p>
+<ol class="arabic">
+<li><p><strong>Plateau</strong> :</p>
+<p>La classe <code class="docutils literal notranslate"><span class="pre">Plateau</span></code> représente le plateau de jeu où les joueurs évoluent. Elle contient une grille de dimensions 10x10 et fournit des méthodes pour placer et effacer les joueurs sur le plateau.</p>
+</li>
+<li><p><strong>Joueur</strong> :</p>
+<p>La classe <code class="docutils literal notranslate"><span class="pre">Joueur</span></code> représente un joueur dans le jeu. Chaque joueur a des attributs tels que sa position (coordonnées x, y) et sa direction (haut, bas, gauche, droite). La classe fournit des méthodes pour faire tourner le joueur vers la gauche ou la droite, ainsi que pour le déplacer d’une ou deux cases dans sa direction actuelle.</p>
+</li>
+<li><p><strong>Visibilite</strong> :</p>
+<p>La classe <code class="docutils literal notranslate"><span class="pre">Visibilite</span></code> gère la visibilité du joueur sur le plateau. Elle fournit une méthode pour déterminer les cases visibles dans la ligne directe du joueur en fonction de sa position et de sa direction.</p>
+</li>
+</ol>
+<p>Chaque classe est conçue de manière à être modulaire et à encapsuler les fonctionnalités pertinentes du jeu. Cela permet une meilleure organisation du code et facilite la compréhension, la modification et l’extension du jeu.</p>
+</section>
+<section id="fonctions">
+<h1>Fonctions<a class="headerlink" href="#fonctions" title="Link to this heading">¶</a></h1>
+<p>Le code comprend également plusieurs fonctions qui complètent les fonctionnalités des classes et contribuent au bon déroulement du jeu. Voici une présentation des principales fonctions du jeu :</p>
+<ol class="arabic">
+<li><p><strong>position_valide(x, y)</strong> :</p>
+<p>Cette fonction vérifie si les coordonnées données (x, y) sont valides sur le plateau de jeu. Elle renvoie <code class="docutils literal notranslate"><span class="pre">True</span></code> si les coordonnees sont valides et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
+</li>
+<li><p><strong>placer_joueur(joueur)</strong> :</p>
+<p>Cette fonction place un joueur sur le plateau de jeu, à condition que sa position soit valide. Elle met à jour la grille du plateau en définissant la position du joueur.</p>
+</li>
+<li><p><strong>effacer_joueur(joueur)</strong> :</p>
+<p>Cette fonction éfface la position d’un joueur sur le plateau de jeu. Si le joueur se trouve sur une position valide, cette fonction réinitialise la case correspondante de la grille du plateau.</p>
+</li>
+<li><p><strong>bouger(distance)</strong> :</p>
+<p>Cette fonction permet à un joueur de se déplacer d’une ou deux cases dans sa direction actuelle. Elle prend en compte la distance spécifiée et les limites du plateau pour déterminer la nouvelle position du joueur.</p>
+</li>
+<li><p><strong>ligne_visible(joueur)</strong> :</p>
+<p>Cette fonction de la classe <code class="docutils literal notranslate"><span class="pre">Visibilite</span></code> calcule les cases visibles dans la ligne directe d’un joueur en fonction de sa position et de sa direction. Elle renvoie une liste de coordonnées représentant les cases visibles.</p>
+</li>
+<li><p><strong>fin_du_jeu(joueur1, joueur2)</strong> :</p>
+<p>Cette fonction vérifie si le jeu est terminé en comparant les positions de deux joueurs. Si les deux joueurs se trouvent sur la même case, la fonction renvoie <code class="docutils literal notranslate"><span class="pre">True</span></code>, indiquant que le jeu est terminé avec un gagnant.</p>
+</li>
+</ol>
+<p>Chaque fonction remplit un rôle spécifique dans le jeu et contribue à son fonctionnement global. Elles sont conçues pour être réutilisables et permettre une meilleure modularité du code.</p>
+</section>
+<section id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h1>
+<p>Le jeu présenté dans cette documentation offre une simulation simple mais divertissante d’un joueur se déplaçant sur un plateau virtuel. À travert l’utilisation de classes et de fonctions bien définies, le code fournit une base solide pour développer des fonctionnalités supplémentaires ou pour être utilisé comme base d’un projet plus complexe.</p>
+<p>En explorant le code source, vous découvrirez comment les classes et les fonctions intéragissent pour créer une expérience de jeu cohérente. N’hésitez pas à examiner le code en détail, à le modifier et à l’adapter à vos besoins spécifiques.</p>
+<p>Nous espérons que cette documentation vous a été utile pour comprendre le fonctionnement du jeu et pour explorer les concepts de base de la programmation orientée objet en Python.</p>
+<p>Nous vous remercions de l’interêt que vous portez à ce projet et vous encourageons à continuer à explorer et à apprendre !</p>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Index du module</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Page de recherche</span></a></p></li>
+</ul>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Projet_code_source</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, Abel Bonicel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

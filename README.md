@@ -82,7 +82,7 @@ Appliquez les modifications et retournez sur votre invite de commande. faite:
 `cd /home/user/nom_du_dossier`
 cela vous amène dans votre dossier et maintenant il faut installer git. Pour ce faire faites la commande :
 
-`sudo pat install git`
+`sudo apt install git`
 
 mettez votre mot de passe et acceptez l'installation en appuyant sur y.
 
@@ -105,9 +105,13 @@ Commande de base de git :
 `git branch -M <nom de la branche :main ,dev, ...>`
 `git push origin <nom de la branche :main ,dev, ...>`
 
-## Pyhton : 
+## Python : 
 
 Pour commencer allez dans l'invite de commande et faites : 
 
 `sudo apt install pyhton`
+
+Puis utilisez un IDE (Environnement de Developpement) et codez ! 
+(Pensez bien à enregistrer vos codes dans le dossier de votre projet)
+
 
